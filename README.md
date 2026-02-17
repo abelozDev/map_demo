@@ -20,4 +20,7 @@ Demo project for technical showcase purposes.
 ## Screenshot
 _(screenshot will be added)_
 
-<img width="637" height="1280" alt="image" src="https://github.com/user-attachments/assets/e70f06e9-0b61-427e-ac2f-545cbd9552ee" />
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e70f06e9-0b61-427e-ac2f-545cbd9552ee" width="360" />
+</p>
+
