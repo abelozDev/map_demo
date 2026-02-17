@@ -1,17 +1,30 @@
 # map_demo
 
-A new Flutter project.
+Flutter demo application that demonstrates working with an interactive map.
 
-## Getting Started
+## What it does
 
-This project is a starting point for a Flutter application.
+- Full-screen map via [MapLibre](https://maplibre.org/) ([maplibre](https://pub.dev/packages/maplibre) package).
+- Raster base layer (Google Satellite) added in `onStyleLoaded`; camera set in `onMapCreated`.
+- Toggle 2D/3D (map pitch) with the button on the right.
 
-A few resources to get you started if this is your first Flutter project:
+## Requirements
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+- Flutter SDK (see [pubspec.yaml](pubspec.yaml) for SDK constraint).
+- Android (tested on Android; other platforms may work depending on MapLibre support).
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Run
+
+```bash
+flutter pub get
+flutter run
+```
+
+## Project structure
+
+- `lib/main.dart` — one screen with `MapLibreMap`, 2D/3D toggle overlay.
+
+## Links
+
+- [Flutter documentation](https://docs.flutter.dev/)
+- [MapLibre Flutter documentation](https://flutter-maplibre.pages.dev/)
