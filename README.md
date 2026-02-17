@@ -1,30 +1,25 @@
-# map_demo
+# Flutter MapLibre Demo
 
-Flutter demo application that demonstrates working with an interactive map.
+Minimal Flutter demo project showcasing **MapLibre** map engine integration.
 
-## What it does
+## Features
+- Fullscreen MapLibre map
+- Raster satellite / hybrid map
+- Programmatic camera control
+- Zoom controls
+- 2D / 3D view toggle
 
-- Full-screen map via [MapLibre](https://maplibre.org/) ([maplibre](https://pub.dev/packages/maplibre) package).
-- Raster base layer (Google Satellite) added in `onStyleLoaded`; camera set in `onMapCreated`.
-- Toggle 2D/3D (map pitch) with the button on the right.
+## Stack
+- Flutter
+- MapLibre
+- Android
 
-## Requirements
+## Notes
+Demo project for technical showcase purposes.
 
-- Flutter SDK (see [pubspec.yaml](pubspec.yaml) for SDK constraint).
-- Android (tested on Android; other platforms may work depending on MapLibre support).
+## Screenshot
 
-## Run
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/e70f06e9-0b61-427e-ac2f-545cbd9552ee" width="360" />
+</p>
 
-```bash
-flutter pub get
-flutter run
-```
-
-## Project structure
-
-- `lib/main.dart` — one screen with `MapLibreMap`, 2D/3D toggle overlay.
-
-## Links
-
-- [Flutter documentation](https://docs.flutter.dev/)
-- [MapLibre Flutter documentation](https://flutter-maplibre.pages.dev/)
