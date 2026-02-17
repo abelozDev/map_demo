@@ -31,9 +31,10 @@ class MapScreen extends StatefulWidget {
 class _MapScreenState extends State<MapScreen> {
   static const _sourceId = 'google-satellite';
   static const _layerId = 'google-satellite-layer';
-  static const _rasterLayer = RasterStyleLayer(
+  static const _rasterLayerVisible = RasterStyleLayer(
     id: _layerId,
     sourceId: _sourceId,
+    layout: {'visibility': 'visible'},
   );
   static const _moscow = Geographic(lon: 37.618423, lat: 55.751244);
   static const _pitch3D = 50.0;
@@ -79,14 +80,14 @@ class _MapScreenState extends State<MapScreen> {
     );
   }
 
-  Future<void> _toggleSchemeSatellite() async {
+  void _toggleSchemeSatellite() {
     final style = _mapController?.style;
     if (style == null) return;
     setState(() => _isSatellite = !_isSatellite);
     if (_isSatellite) {
-      await style.addLayer(_rasterLayer);
+      style.addLayer(_rasterLayerVisible);
     } else {
-      await style.removeLayer(_layerId);
+      style.removeLayer(_layerId);
     }
   }
 
@@ -140,7 +141,7 @@ class _MapScreenState extends State<MapScreen> {
                 tileSize: 256,
               );
               await style.addSource(source);
-              await style.addLayer(_rasterLayer);
+              await style.addLayer(_rasterLayerVisible);
             },
           ),
           Positioned(
